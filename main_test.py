@@ -17,13 +17,19 @@ class TestProduct(unittest.TestCase):
         self.assertEqual(self.product.stock,10)
 
     #testando os métodos
+
+    #Execução
     def test_increase_stock(self):
         self.product.increase_stock(10)
+        #Verificação
         self.assertEqual(self.product.stock,20)
         # o stock setado inicialmente tem 10, foi incrementado 10, logo o resultado tem q ser 20
         #teste ok
+
+    #Execução
     def test_decrease_stock(self):
         self.product.decrease_stock(10)
+        #Verificação
         self.assertEqual(self.product.stock,0)
         # o stock setado é de 10, logo o resultado do teste tem q ser 0
 
