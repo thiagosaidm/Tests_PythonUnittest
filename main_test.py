@@ -26,6 +26,14 @@ class TestProduct(unittest.TestCase):
         # o stock setado inicialmente tem 10, foi incrementado 10, logo o resultado tem q ser 20
         #teste ok
 
+    def test_increase_stock_negative(self):
+        with self.assertRaises(Exception):
+             self.product.increase_stock(-1)
+
+    def test_increase_stock_zero(self):
+        with self.assertRaises(Exception):
+            self.product.increase_stock(0)
+
     #Execução
     def test_decrease_stock(self):
         self.product.decrease_stock(10)
